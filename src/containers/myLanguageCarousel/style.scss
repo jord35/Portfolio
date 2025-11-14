@@ -1,0 +1,55 @@
+.language-carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 1.5rem 0;
+    position: relative;
+
+    .carousel-track {
+        display: flex;
+        gap: 2rem;
+        width: max-content;
+        animation: scroll 30s linear infinite;
+        will-change: transform;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+    .carousel-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        min-width: 100px;
+        text-align: center;
+        color: #333;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        .language-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 0.5rem;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+        }
+    }
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-25%);
+    }
+}
