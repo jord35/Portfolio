@@ -1,41 +1,24 @@
+// src/components/Card/index.jsx
 import "./style.scss";
 import ActionButton from "../ActionButton";
 
-const Card = ({ image, title, buttons = [] }) => {
-    return (
-        <div className="card">
-
-            {/* Titre */}
-            {title && <h2 className="card__title">{title}</h2>}
-
-            {/* Image */}
-            {image && (
-                <img
-                    src={image}
-                    alt={`Aperçu de ${title}`}
-                    className="card__image"
+const Card = ({ image, title, description, buttons = [] }) => (
+    <div className="card">
+        {image && <img src={image} alt={title} className="card__image" />}
+        {title && <h3 className="card__title">{title}</h3>}
+        {description && <p className="card__description">{description}</p>}
+        <div className="card__buttons">
+            {buttons.map((btn, i) => (
+                <ActionButton
+                    key={i}
+                    label={btn.label}
+                    url={btn.url}
+                    className={btn.className}
                 />
-            )}
-
-            {/* Boutons */}
-            {buttons.length > 0 && (
-                <div
-                    className={`card__buttons ${buttons.length === 1 ? "card__buttons--single" : ""
-                        }`}
-                >
-                    {buttons.map((btn, i) => (
-                        <ActionButton
-                            key={i}
-                            label={btn.label}
-                            url={btn.url}
-                            copy={btn.copy}
-                            className={btn.className}
-                        />
-                    ))}
-                </div>
-            )}
+            ))}
         </div>
-    );
-};
+    </div>
+);
 
 export default Card;
+

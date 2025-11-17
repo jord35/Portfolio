@@ -1,32 +1,34 @@
-
-
+// src/containers/contactMe/index.jsx
 import HoverMenuButton from "../../components/HoverMenuButton";
+import { mailServices } from "./contactData.js";
+import "./style.scss";
 
 const ContactMe = () => {
-    const email = "jordan.gillouaye@gmail.com";
-
-    const mailServices = [
-        {
-            name: <img src="public/icons/gmail.webp" alt="Gmail" className="w-6 h-6" />,
-            url: `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`,
-            copy: email,
-        },
-        {
-            name: <img src="/icons/outlook.webp" alt="Outlook" className="w-6 h-6" />,
-            url: `https://outlook.live.com/mail/0/deeplink/compose?to=${email}`,
-            copy: email,
-        },
-        {
-            name: <img src="/icons/yahoo.webp" alt="Yahoo Mail" className="w-6 h-6" />,
-            url: `https://compose.mail.yahoo.com/?to=${email}`,
-            copy: email,
-        },
-    ];
-
     return (
-        <section id="contact" className="py-20 text-center">
-            <h2 className="text-3xl font-bold mb-8">Contactez-moi</h2>
-            <HoverMenuButton label="Contacter moi" items={mailServices} />
+        <section id="contact" className="contact">
+            <h2 className="contact__title">Entrons en contact</h2>
+
+            <p className="contact__text">
+                Mon profil vous intéresse ? Je serais ravi d’échanger avec vous à propos d’une
+                opportunité professionnelle, d’un projet ou tout simplement de discuter.
+            </p>
+
+            <HoverMenuButton
+                label="Me contacter"
+                items={mailServices.map(service => ({
+                    name: (
+                        <img
+                            src={service.icon}
+                            alt={service.alt}
+                            width={28}
+                            height={28}
+                        />
+                    ),
+                    url: service.url,
+                    copy: service.copy,
+                }))}
+                position="bottom"
+            />
         </section>
     );
 };

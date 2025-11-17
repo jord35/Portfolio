@@ -1,6 +1,8 @@
+@use "../../styles/variables" as *;
+
 .card {
     max-width: 22rem;
-    background: white;
+    background: $color-white;
     border-radius: 1.25rem;
     padding: 1.5rem;
     text-align: center;

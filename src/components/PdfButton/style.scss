@@ -1,3 +1,6 @@
+// src/components/PdfButton/style.scss
+@use "../../styles/variables" as *;
+
 .pdf-btn {
     background: none;
     border: none;
@@ -7,9 +10,16 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 0.4rem; // espace entre icône et texte
     transition: transform 0.15s ease;
 
     &:hover {
         transform: translateY(-1px);
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
     }
 }

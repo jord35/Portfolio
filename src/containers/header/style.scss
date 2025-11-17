@@ -1,3 +1,5 @@
+@use "../../styles/variables" as *;
+
 .header-container {
     position: relative;
     width: 100%;
@@ -6,8 +8,9 @@
     align-items: center;
     text-align: center;
     padding: 6rem 1rem;
-    background: url("/images/header-bg.jpg") center/cover no-repeat;
-    color: #fff;
+    background: url("public/Copilot_20251116_014029.png") center/cover no-repeat;
+    color: $color-white;
+    border-radius: 2rem;
 
     .header-content {
         max-width: 800px;
@@ -34,8 +37,8 @@
             .btn-primary {
                 padding: 0.6rem 1.2rem;
                 border-radius: 0.75rem;
-                background-color: #1d4ed8;
-                color: #fff;
+                background-color: $color-primary;
+                color: $color-white;
                 cursor: pointer;
                 font-weight: 500;
                 transition: all 0.2s ease;
@@ -45,7 +48,7 @@
                 justify-content: center;
 
                 &:hover {
-                    background-color: #2563eb;
+                    background-color: $color-primary ;
                     transform: translateY(-1px);
                 }
             }
@@ -59,5 +62,6 @@
         inset: 0;
         background: rgba(0, 0, 0, 0.3);
         z-index: 1;
+        border-radius: 2rem;
     }
 }

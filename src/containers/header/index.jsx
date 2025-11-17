@@ -38,12 +38,7 @@ export default function Header() {
                         url="https://github.com/jord35"
                         className="btn-primary"
                     />
-                    <ActionButton
-                        label="Me contacter"
-                        url="#contact"
-                        className="btn-primary"
-                        onClick={handleScrollToContact}
-                    />
+
                 </div>
             </div>
         </header>

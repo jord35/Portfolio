@@ -1,67 +1,129 @@
+@use "../../styles/variables" as *;
+
 .hover-menu {
     position: relative;
     display: inline-block;
 
+    /* Bouton principal toujours visible */
     &__trigger {
         padding: 0.6rem 1.2rem;
         border-radius: 0.75rem;
         cursor: pointer;
         transition: all 0.2s ease;
+        font: inherit;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        font: inherit;
-
-
-    }
-
-    &__panel {
-        position: absolute;
-        left: 0;
-        margin-top: 0.5rem;
-
-        width: 14rem;
-        background: white;
-        border-radius: 0.75rem;
-        border: 1px solid rgba(0, 0, 0, 0.12);
-        padding: 0.3rem 0;
-
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-        z-index: 10;
-
-        animation: fadeIn 0.15s ease-out;
-    }
-
-
-    &__item {
-        display: inline-flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 0.5rem;
-
-        width: 100%;
-        padding: 0.6rem 1rem;
-        text-align: left;
-        border-radius: 0;
-        background: none;
-        box-shadow: none;
-        font: inherit;
-        cursor: pointer;
-        transition: background 0.15s ease, transform 0.15s ease;
+        background-color: $color-primary;
+        color: $color-white;
+        border: none;
 
         &:hover {
-            background: #f3f3f3;
-            transform: translateY(-1px);
+            background-color: $color-secondary;
         }
+    }
+
+    /* Panel des items */
+    &__panel {
+        width: auto !important;
+        position: absolute;
+        display: flex;
+        gap: 0.6rem;
+        background: $color-white;
+        border-radius: 0.75rem;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        padding: 0.5rem 0.6rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        z-index: 10;
+        opacity: 0;
+        transform: scale(0.95);
+        pointer-events: none;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    &--open .hover-menu__panel {
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: auto;
+    }
+
+    /* Chaque item */
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 0.6rem;
+        background: none;
+        opacity: 0;
+        transform: scale(0.4);
+        transition: transform 0.25s ease, opacity 0.2s ease;
 
         img {
-            width: 1.5rem;
-            height: 1.5rem;
+            width: 1.7rem;
+            height: 1.7rem;
+            transition: transform 0.25s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
+    }
+
+    &--open .hover-menu__item {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    /* Animation en cascade */
+    &--open .hover-menu__item:nth-child(1) {
+        transition-delay: 0.05s;
+    }
+
+    &--open .hover-menu__item:nth-child(2) {
+        transition-delay: 0.25s;
+    }
+
+    &--open .hover-menu__item:nth-child(3) {
+        transition-delay: 0.45s;
+    }
+
+    &--open .hover-menu__item:nth-child(4) {
+        transition-delay: 0.65s;
+    }
+
+    /* Variantes de position */
+    &--right .hover-menu__panel {
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%) scale(0.95);
+        margin-left: 0.5rem;
+    }
+
+    &--bottom .hover-menu__panel {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) scale(0.95);
+        margin-top: 0.5rem;
+    }
+
+    &--left .hover-menu__panel {
+        top: 50%;
+        right: 100%;
+        transform: translateY(-50%) scale(0.95);
+        margin-right: 0.5rem;
+    }
+
+    &--top .hover-menu__panel {
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%) scale(0.95);
+        margin-bottom: 0.5rem;
     }
 }
 
-
+/* Animation d’apparition du panel */
 @keyframes fadeIn {
     from {
         opacity: 0;
