@@ -21,6 +21,8 @@
         &:hover {
             background-color: $color-secondary;
         }
+
+
     }
 
     /* Panel des items */
@@ -99,6 +101,13 @@
         left: 100%;
         transform: translateY(-50%) scale(0.95);
         margin-left: 0.5rem;
+
+        @media (max-width: 768px) {
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) scale(0.95);
+            margin-top: 0.5rem;
+        }
     }
 
     &--bottom .hover-menu__panel {

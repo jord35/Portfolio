@@ -1,4 +1,3 @@
-// src/components/Card/index.jsx
 import "./style.scss";
 import ActionButton from "../ActionButton";
 
@@ -13,7 +12,7 @@ const Card = ({ image, title, description, buttons = [] }) => (
                     key={i}
                     label={btn.label}
                     url={btn.url}
-                    className={btn.className}
+                    className={`btn-primary ${btn.className || ""}`}
                 />
             ))}
         </div>
@@ -21,4 +20,5 @@ const Card = ({ image, title, description, buttons = [] }) => (
 );
 
 export default Card;
+
 

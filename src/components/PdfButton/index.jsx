@@ -23,10 +23,11 @@ const PdfButton = ({
 
     return (
         <button onClick={handleClick} className={`pdf-btn ${className}`}>
-            {icon && <img src={icon} alt="pdf icon" className="pdf-btn__icon" />}
+            {icon && <span className="pdf-btn__icon">{icon}</span>}
             {label && <span>{label}</span>}
         </button>
     );
 };
 
 export default PdfButton;
+

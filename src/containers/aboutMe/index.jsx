@@ -5,7 +5,7 @@ const AboutMe = () => {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        const timeout = setTimeout(() => setVisible(true), 100); // léger délai pour déclencher l'animation
+        const timeout = setTimeout(() => setVisible(true), 100);
         return () => clearTimeout(timeout);
     }, []);
 

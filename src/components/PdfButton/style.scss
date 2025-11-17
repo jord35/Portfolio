@@ -4,22 +4,35 @@
 .pdf-btn {
     background: none;
     border: none;
-    padding: 0;
+    padding: 0.5rem 1rem;
     font: inherit;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.4rem; // espace entre icône et texte
-    transition: transform 0.15s ease;
+    gap: 0.4rem;
+    border-radius: 0.75rem;
+    transition: all 0.2s ease;
 
     &:hover {
         transform: translateY(-1px);
+        opacity: 0.85;
     }
 
     &__icon {
-        width: 20px;
-        height: 20px;
-        object-fit: contain;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            font-size: 2rem;
+            pointer-events: none;
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
     }
 }

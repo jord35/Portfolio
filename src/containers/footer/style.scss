@@ -32,6 +32,30 @@
             opacity: 0.85;
         }
     }
+
+    .footer__btn--share {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-footer;
+        color: $color-white;
+
+        i {
+            font-size: 1.2rem;
+            pointer-events: none;
+        }
+    }
+
+    .fa-file-pdf {
+        color: $color-white;
+    }
+
+    .footer__message {
+        text-align: center;
+        font-size: 0.875rem;
+        color: $color-white;
+        margin: 0;
+    }
 }
 
 /* MEDIA QUERIES */

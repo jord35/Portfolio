@@ -4,8 +4,9 @@ import { socialLinks } from "./shareData";
 const SharePortfolio = () => {
     return (
         <HoverMenuButton
-            label="Partager"
-
+            label=""
+            icon={<i className="fa-solid fa-share"></i>}
+            className="  footer__btn footer__btn--share"
             items={socialLinks.map(s => ({
                 name: <img src={s.icon} alt={s.alt} width={26} height={26} />,
                 url: s.url,
