@@ -2,6 +2,7 @@
 import "./style.scss";
 
 const PdfButton = ({
+    ariaLabel = "",
     label = "Télécharger mon CV",
     fileName = "CV_JGillouaye.pdf",
     download = true,
@@ -10,7 +11,6 @@ const PdfButton = ({
 }) => {
     const handleClick = () => {
         const fileUrl = `/${fileName}`;
-
         if (download) {
             const link = document.createElement("a");
             link.href = fileUrl;
@@ -22,12 +22,17 @@ const PdfButton = ({
     };
 
     return (
-        <button onClick={handleClick} className={`pdf-btn ${className}`}>
+        <button
+            onClick={handleClick}
+            className={`pdf-btn ${className}`}
+            aria-label={ariaLabel || label}
+        >
             {icon && <span className="pdf-btn__icon">{icon}</span>}
-            {label && <span>{label}</span>}
+            {label && <span className="sr-only">{label}</span>}
         </button>
     );
 };
+
 
 export default PdfButton;
 

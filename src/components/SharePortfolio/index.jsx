@@ -5,6 +5,7 @@ const SharePortfolio = () => {
     return (
         <HoverMenuButton
             label=""
+            aria_label=" Ouverture du menu Pour les différents Réseaux sociaux disponibles"
             icon={<i className="fa-solid fa-share"></i>}
             className="  footer__btn footer__btn--share"
             items={socialLinks.map(s => ({

@@ -17,10 +17,12 @@ const Footer = () => {
                 {/* CV */}
                 <PdfButton
                     label=""
+
+                    ariaLabel="Télécharger mon CV"
                     icon={<i className="fa-regular fa-file-pdf"></i>}
-                    fileName="CV.pdf"
                     className="footer__btn footer__btn--pdf"
                 />
+
             </div>
         </footer>
     );

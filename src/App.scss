@@ -10,7 +10,11 @@
     margin: 0 auto;
     background-color: $color-bg;
     min-height: 100vh;
-    padding: 3rem 2rem 0rem 2rem;
+    padding: 5rem 2rem 0rem 2rem;
+
+    @media (max-width: 768px) {
+        padding: 5rem 0rem 0rem 0rem;
+    }
 }
 
 main {

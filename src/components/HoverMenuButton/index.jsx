@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import ActionButton from "../ActionButton";
 import "./style.scss";
 
-const HoverMenuButton = ({ label, icon, items = [], position = "right", className = "" }) => {
+const HoverMenuButton = ({ label, aria_label = "Ouvrir le menu", icon, items = [], position = "right", className = "" }) => {
     const [open, setOpen] = useState(false);
     const timeoutRef = useRef(null);
     const panelRef = useRef(null);
@@ -67,6 +67,7 @@ const HoverMenuButton = ({ label, icon, items = [], position = "right", classNam
                 aria-haspopup="true"
                 aria-expanded={open}
                 aria-controls="menu-panel"
+                aria-label={aria_label}
             >
                 {icon ? icon : label}
             </button>

@@ -12,6 +12,13 @@
     padding: 2rem 1rem;
 }
 
+@media (max-width: 1223px) {
+    .cards-container {
+        gap: 6rem;
+        padding: 2rem 0rem;
+    }
+}
+
 @media (max-width: 768px) {
     .cards-container {
         gap: 6rem;
