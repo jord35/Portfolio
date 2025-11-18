@@ -6,7 +6,7 @@ import "./style.scss";
 
 const ProjectCards = () => {
     return (
-        <section className="projects-section">
+        <section id="projects" className="projects-section">
             <Cards list={projects} />
         </section>
     );

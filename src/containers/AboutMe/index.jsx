@@ -10,7 +10,7 @@ const AboutMe = () => {
     }, []);
 
     return (
-        <section className={`about-me ${visible ? "visible" : ""}`}>
+        <section id="about-me" className={`about-me ${visible ? "visible" : ""}`}>
             <h2>À propos de moi</h2>
             <p>
                 Passionné par le développement web, j’ai choisi de me spécialiser dans la création d’interfaces modernes, accessibles et performantes.

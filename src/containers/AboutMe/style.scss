@@ -1,8 +1,8 @@
 @use "../../styles/variables" as *;
 
 .about-me {
-    background: $color-txt;
-    color: $color-white;
+    // background: $color-txt;
+    color: $color-txt;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,7 +22,7 @@
         max-width: 800px;
         font-size: 1.1rem;
         line-height: 1.8;
-        color: $color-white;
+        color: $color-txt;
         text-align: center; // centrage du texte
         white-space: pre-wrap; // conserve les sauts de ligne
     }

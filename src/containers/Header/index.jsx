@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import PdfButton from "../../components/PdfButton";
 import ActionButton from "../../components/ActionButton";
+import NavBar from "../../components/NavBar";
 import "./style.scss";
 
 export default function Header() {
@@ -25,7 +26,8 @@ export default function Header() {
         }
     };
 
-    return (
+    return (<>
+        <NavBar />
         <header className="header-container">
             <div className="header-content">
                 <h1>Mon Portfolio</h1>
@@ -42,5 +44,6 @@ export default function Header() {
                 </div>
             </div>
         </header>
+    </>
     );
 }

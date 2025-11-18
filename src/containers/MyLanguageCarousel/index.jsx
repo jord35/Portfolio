@@ -16,7 +16,7 @@ export default function MyLanguageCarousel() {
     const repeated = Array.from({ length: 4 }, () => languages).flat();
 
     return (
-        <div className="language-carousel">
+        <div id="skills" className="language-carousel">
             <div className="carousel-track">
                 {repeated.map((lang, index) => (
                     <div key={index} className="carousel-item">

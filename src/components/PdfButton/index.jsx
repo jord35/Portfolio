@@ -3,7 +3,7 @@ import "./style.scss";
 
 const PdfButton = ({
     label = "Télécharger mon CV",
-    fileName = "cv.pdf",
+    fileName = "CV_JGillouaye.pdf",
     download = true,
     icon = null,
     className = "",

@@ -1,20 +1,20 @@
 export const projects = [
     {
-        image: "/imagesProject/Frontend.png",
-        title: "Projet Front-End",
-        description: "Application moderne en React avec design responsive.",
+        image: "/imagesProject/KASA.webp",
+        title: "Projet KASA",
+        description: " Kasa est un projet d’intégration front-end qui permet de mettre en pratique React et la conception d’interfaces modernes",
         buttons: [
-            { label: "GitHub", url: "https://github.com/", className: "btn-dark" },
-            { label: "Voir le site", url: "https://example.com", className: "btn-blue" }
+            { label: "GitHub", url: "https://github.com/jord35/kasa", className: "btn-dark" },
+            { label: "Voir le site", url: "https://kasafromjord.netlify.app/", className: "btn-blue" }
         ]
     },
     {
-        image: "/imagesProject/Backend.png",
-        title: "API Back-End",
-        description: "API RESTful en Node/Express connectée à MongoDB.",
+        image: "public/imagesProject/Ohmyfood.webp",
+        title: "Projet OhMyFood ",
+        description: "OhMyFood est un projet d’intégration front-end qui met l’accent sur les animations CSS et la qualité visuelle.",
         buttons: [
-            { label: "GitHub", url: "https://github.com/", className: "btn-dark" },
-            { label: "Démo", url: "https://example.com/demo", className: "btn-green" }
+            { label: "GitHub", url: "https://github.com/jord35/OhMyFood", className: "btn-dark" },
+            { label: "Voir le site", url: "https://jord35.github.io/OhMyFood/index.html", className: "btn-green" }
         ]
     }
 ];

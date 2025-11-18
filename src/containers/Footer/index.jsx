@@ -4,7 +4,7 @@ import "./style.scss";
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <footer id="footer" className="footer">
             <div className="footer__container">
                 {/* Partager */}
                 <SharePortfolio />

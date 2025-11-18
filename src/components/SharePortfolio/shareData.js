@@ -1,6 +1,6 @@
 // src/data/shareData.js
 
-const portfolioUrl = "https://www.mon-portfolio.com";
+const portfolioUrl = "https://bespoke-duckanoo-5d55e1.netlify.app/";
 
 export const socialLinks = [
     {
