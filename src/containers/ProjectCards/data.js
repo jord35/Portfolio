@@ -9,7 +9,7 @@ export const projects = [
         ]
     },
     {
-        image: "public/imagesProject/Ohmyfood.webp",
+        image: "/imagesProject/Ohmyfood.webp",
         title: "Projet OhMyFood ",
         description: "OhMyFood est un projet d’intégration front-end qui met l’accent sur les animations CSS et la qualité visuelle.",
         buttons: [
